@@ -16,6 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+app.set('trust proxy', 1); // Trust first proxy (Railway)
 const PORT = process.env.PORT || 3001;
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback-super-secret-key-123';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'soundsperfect2024';
