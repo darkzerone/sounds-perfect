@@ -29,7 +29,9 @@ app.use(helmet({
       scriptSrc: ["'self'", "'unsafe-inline'"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      connectSrc: ["'self'"]
+      connectSrc: ["'self'"],
+      frameSrc: ["'self'", "https://player.vimeo.com"],
+      childSrc: ["'self'", "https://player.vimeo.com"]
     }
   }
 }));
