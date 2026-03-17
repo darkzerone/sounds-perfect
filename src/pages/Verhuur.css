@@ -1,0 +1,152 @@
+/* Basic styling for inner pages that share layout */
+.hero-small {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 140px;
+}
+
+.hero-small .hero-title {
+  color: var(--text-primary);
+  text-shadow: none;
+}
+
+.hero-small .hero-subtitle {
+  color: var(--text-secondary);
+  text-shadow: none;
+}
+
+.sphere-verhuur {
+  width: 40vw;
+  height: 40vw;
+  background: var(--brand-blue-dark);
+  top: 0;
+  left: 30vw;
+}
+
+.verhuur-container {
+  padding: 4rem 1.5rem;
+}
+
+.verhuur-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.text-center { text-align: center; }
+.mb-0 { margin-bottom: 0; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.p-6 { padding: 1.5rem; }
+.pb-2 { padding-bottom: 0.5rem; }
+.border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+.border-gray-700 { border-color: rgba(0,0,0,0.2); }
+.border-gray-800 { border-color: rgba(0,0,0,0.1); }
+
+.text-2xl { font-size: 1.5rem; }
+.text-xl { font-size: 1.25rem; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.text-brand-blue { color: var(--brand-blue-dark); }
+
+.leading-relaxed { line-height: 1.75; }
+.overflow-hidden { overflow: hidden; }
+.rounded-t-lg { border-top-left-radius: 16px; border-top-right-radius: 16px; }
+.w-full { width: 100%; }
+.h-auto { height: auto; }
+.object-cover { object-fit: cover; }
+.max-h-\[400px\] { max-height: 400px; }
+
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.w-5 { width: 1.25rem; }
+.h-5 { height: 1.25rem; }
+
+.content-image img {
+  border-bottom: 1px solid var(--border-color);
+}
+
+@media (max-width: 900px) {
+  .verhuur-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Feature Cards (Used in Location.jsx) */
+.features-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.features-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  align-items: flex-start;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--brand-blue);
+}
+
+.feature-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(0, 88, 133, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--brand-blue);
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title-item {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.feature-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}

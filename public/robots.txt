@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Exclude private admin and dynamic stream routes
+Disallow: /admin
+Disallow: /admin/
+Disallow: /stream/
+
+Sitemap: https://sounds-perfect.nl/sitemap.xml
