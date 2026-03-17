@@ -185,6 +185,17 @@ app.delete('/api/streams/:id', authenticateToken, (req, res) => {
   });
 });
 
+// Serve static files from the Vite build directory
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// Catch-all handler for Single Page Application routing (Fallback to index.html)
+app.get('*', (req, res, next) => {
+  if (!req.url.startsWith('/api')) {
+    return res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  }
+  next();
+});
+
 app.listen(PORT, () => {
   console.log(`Backend Server running on http://localhost:${PORT}`);
 });
