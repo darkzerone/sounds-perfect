@@ -19,7 +19,7 @@ export default function AdminDashboard({ onLogout }) {
 
   const fetchStreams = async () => {
     try {
-      const res = await fetch('http://localhost:3001/api/streams', {
+      const res = await fetch('/api/streams', {
          credentials: 'include'
       });
     } catch(err) {
@@ -31,7 +31,7 @@ export default function AdminDashboard({ onLogout }) {
     // This will fetch streams when the component mounts
     const loadStreams = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/streams', {
+        const response = await fetch('/api/streams', {
           credentials: 'include'
         }); 
         if (response.ok) {
@@ -51,7 +51,7 @@ export default function AdminDashboard({ onLogout }) {
 
   const handleLogout = async () => {
     try {
-      await fetch('http://localhost:3001/api/auth/logout', { 
+      await fetch('/api/auth/logout', { 
         method: 'POST',
         credentials: 'include'
       });
@@ -66,7 +66,7 @@ export default function AdminDashboard({ onLogout }) {
     if (!window.confirm('Weet u zeker dat u deze stream wilt verwijderen?')) return;
     
     try {
-      const res = await fetch(`http://localhost:3001/api/streams/${id}`, { 
+      const res = await fetch(`/api/streams/${id}`, { 
         method: 'DELETE',
         credentials: 'include'
       });
@@ -83,7 +83,7 @@ export default function AdminDashboard({ onLogout }) {
   const handleCreate = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:3001/api/streams', {
+      const res = await fetch('/api/streams', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

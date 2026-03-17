@@ -14,7 +14,7 @@ export default function Stream() {
   useEffect(() => {
     const fetchStream = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/streams/${id}`);
+        const response = await fetch(`/api/streams/${id}`);
         if (!response.ok) throw new Error('Stream niet gevonden');
         const data = await response.json();
         setStream(data);

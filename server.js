@@ -21,7 +21,18 @@ const JWT_SECRET = process.env.JWT_SECRET || 'fallback-super-secret-key-123';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'soundsperfect2024';
 
 // Middleware
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      imgSrc: ["'self'", "data:", "blob:", "https://images.unsplash.com", "https://*.unsplash.com"],
+      scriptSrc: ["'self'", "'unsafe-inline'"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      connectSrc: ["'self'"]
+    }
+  }
+}));
 app.use(cors({
   origin: ['http://localhost:5173', 'http://127.0.0.1:5173'], // Vite dev server
   credentials: true
