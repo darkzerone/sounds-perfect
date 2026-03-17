@@ -30,7 +30,17 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Database Setup
-const dbPath = path.join(__dirname, 'streams.db');
+const dbPath = process.env.DATABASE_URL || path.join(__dirname, 'streams.db');
+
+// Ensure database directory exists if volume-mounted
+import fs from 'fs';
+if (process.env.DATABASE_URL) {
+  const dir = path.dirname(process.env.DATABASE_URL);
+  if (!fs.existsSync(dir)){
+      fs.mkdirSync(dir, { recursive: true });
+  }
+}
+
 const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
     console.error('Error connecting to SQLite database:', err.message);
@@ -189,7 +199,7 @@ app.delete('/api/streams/:id', authenticateToken, (req, res) => {
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Catch-all handler for Single Page Application routing (Fallback to index.html)
-app.get('*', (req, res, next) => {
+app.get('*splat', (req, res, next) => {
   if (!req.url.startsWith('/api')) {
     return res.sendFile(path.join(__dirname, 'dist', 'index.html'));
   }
