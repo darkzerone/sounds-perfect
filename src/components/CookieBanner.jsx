@@ -26,6 +26,8 @@ export default function CookieBanner() {
       {isVisible && (
         <motion.div 
           className="cookie-banner"
+          role="status"
+          aria-label="Cookie Consent Banner"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}

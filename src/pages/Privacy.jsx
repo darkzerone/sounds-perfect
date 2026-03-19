@@ -1,15 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHelmet from '../components/SEOHelmet';
 
 export default function Privacy() {
   return (
     <div className="page-container" style={{ padding: '140px 2rem 4rem', maxWidth: '800px', margin: '0 auto' }}>
-      <Helmet>
+      <SEOHelmet>
         <title>Privacybeleid | Sounds Perfect</title>
         <meta name="description" content="Privacybeleid en cookieverklaring van Sounds Perfect." />
         <link rel="canonical" href="https://sounds-perfect.nl/privacy" />
         <meta name="robots" content="noindex, follow" />
-      </Helmet>
+      </SEOHelmet>
 
       <div className="glass-panel" style={{ padding: '3rem' }}>
         <h1 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--text-primary)' }}>Privacybeleid & Cookies</h1>

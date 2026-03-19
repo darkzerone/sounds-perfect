@@ -1,58 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEOHelmet from '../components/SEOHelmet';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
+import LocalBusinessSchema from '../components/LocalBusinessSchema';
+import useContactForm from '../hooks/useContactForm';
 import './Contact.css';
 
 export default function Contact() {
   const location = useLocation();
   const initialSubject = location.state?.subject || '';
 
-  const [formState, setFormState] = useState({ 
-    name: '', 
-    email: '', 
-    message: initialSubject ? `Ik heb interesse in: ${initialSubject}\n\n` : '' 
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    // Construct the mailto: link
-    const subject = encodeURIComponent('Nieuw bericht via website');
-    const body = encodeURIComponent(
-      `Naam: ${formState.name}\n` +
-      `E-mailadres: ${formState.email}\n\n` +
-      `Bericht:\n${formState.message}`
-    );
-    
-    // Open the default mail client
-    window.location.href = `mailto:info@sounds-perfect.nl?subject=${subject}&body=${body}`;
-    
-    // Show success state briefly then reset
-    setIsSuccess(true);
-    setTimeout(() => {
-      setIsSuccess(false);
-      setFormState({ name: '', email: '', message: '' });
-    }, 3000);
-  };
-
-  const handleChange = (e) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value });
-  };
+  const { formState, isSubmitting, isSuccess, setIsSuccess, handleChange, handleSubmit } = useContactForm(initialSubject);
 
   return (
     <div className="contact-page">
-      <Helmet>
+      <SEOHelmet>
         <title>Contact Opnemen | Offerte Aanvragen Utrecht | Sounds Perfect</title>
         <meta name="description" content="Neem contact op met Sounds Perfect voor een offerte of meer informatie over onze licht en geluid verhuur in Utrecht en omstreken." />
         <link rel="canonical" href="https://sounds-perfect.nl/contact" />
         <meta property="og:title" content="Contact | Sounds Perfect" />
         <meta property="og:description" content="Neem contact op met Sounds Perfect voor een offerte of meer informatie over onze licht en geluid verhuur in Utrecht en omstreken." />
         <meta property="og:type" content="website" />
-      </Helmet>
+      </SEOHelmet>
+      <LocalBusinessSchema />
       <div className="contact-background">
         <div className="hero-pattern"></div>
       </div>
@@ -65,7 +36,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <h1>Neem Contact Op</h1>
-          <p>Heeft u vragen over onze verhuur of diensten? Wij helpen u graag verder.</p>
+          <p>Heb je vragen, advies nodig of wil je langskomen? We helpen je met veel plezier verder en de koffie staat altijd voor je klaar.</p>
         </motion.div>
 
         {/* Wide Opening Times Card */}
@@ -77,13 +48,13 @@ export default function Contact() {
         >
           <div className="opening-times-content">
             <div className="opening-times-header">
-              <h3>Openingstijden</h3>
+              <h2>Openingstijden</h2>
               <p>In de wereld van evenementen is het regelmatig hollen of stilstaan. Om die reden kan ons hele team ‘on the road’ zijn op een moment dat u ons wil bezoeken. <strong>Voorkom een teleurstelling en bel altijd eerst even voordat u langskomt.</strong></p>
             </div>
             
             <div className="opening-times-columns">
               <div className="opening-column">
-                <h4><Phone size={18} className="inline mr-2" /> Telefonisch</h4>
+                <h3><Phone size={18} className="inline mr-2" /> Telefonisch</h3>
                 <ul>
                   <li><strong>Maandag t/m Zaterdag:</strong></li>
                   <li>08:00 - 18:00 uur</li>
@@ -92,7 +63,7 @@ export default function Contact() {
               </div>
 
               <div className="opening-column">
-                <h4><MapPin size={18} className="inline mr-2" /> Kantoor, winkel & opslag</h4>
+                <h3><MapPin size={18} className="inline mr-2" /> Kantoor, winkel & opslag</h3>
                 <ul>
                   <li><strong>Maandag:</strong> 10:00 - 17:00 uur</li>
                   <li><strong>Dinsdag t/m Vrijdag:</strong> 09:00 - 17:00 uur</li>

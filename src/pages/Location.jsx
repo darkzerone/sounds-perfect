@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import SEOHelmet from '../components/SEOHelmet';
 import { Speaker, Settings, Video, ArrowRight, MapPin } from 'lucide-react';
 import { getRegionById } from '../data/regions';
 import './Verhuur.css'; // Reusing Verhuur styles since it's fundamentally the same service page
@@ -35,11 +35,12 @@ export default function Location() {
 
   return (
     <div className="verhuur-page">
-      <Helmet>
-        <title>{`Audio & Licht Verhuur in ${cityName} | Sounds Perfect`}</title>
-        <meta name="description" content={`Dé specialist voor professionele audio, licht en podium verhuur in ${cityName}. Topkwaliteit apparatuur voor uw evenement, feest of bruiloft in de regio.`} />
+      <SEOHelmet 
+        title={`Audio & Licht Verhuur in ${cityName} | Sounds Perfect`}
+        description={`Dé specialist voor professionele audio, licht en podium verhuur in ${cityName}. Topkwaliteit apparatuur voor uw evenement, feest of bruiloft in de regio.`}
+      >
         <link rel="canonical" href={`https://sounds-perfect.nl/verhuur/${regio}`} />
-      </Helmet>
+      </SEOHelmet>
 
       <div className="hero-section hero-small">
         <div className="hero-background">
@@ -56,7 +57,7 @@ export default function Location() {
             <motion.h1 variants={itemVariants} className="hero-title mb-4">
               Verhuur in <span style={{ color: 'var(--brand-blue)' }}>{cityName}</span>
             </motion.h1>
-            <motion.p variants={itemVariants} className="hero-description text-lg max-w-2xl mx-auto">
+            <motion.p variants={itemVariants} className="hero-description text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)', textShadow: 'none' }}>
               Professionele licht, geluid en podium oplossingen voor elk evenement in {cityName} en omstreken.
             </motion.p>
           </motion.div>
@@ -75,12 +76,10 @@ export default function Location() {
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="verhuur-card h-full" style={{ background: 'var(--bg-card)', borderRadius: '12px', border: '1px solid var(--border-color)', overflow: 'hidden' }}>
               <div className="h-64 overflow-hidden">
-                <img 
-                  src="/rental.png" 
+                <img src="/rental.webp" 
                   alt={`Licht en Geluid Verhuur ${cityName}`} 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  fetchpriority="high"
-                />
+                  fetchPriority="high" />
               </div>
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-4 flex items-center gap-2" style={{ color: 'var(--text-primary)'}}>

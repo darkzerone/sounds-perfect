@@ -1,0 +1,274 @@
+[
+  {
+    "from": "/nieuws/soundcraft-si-expression-1",
+    "to": "/"
+  },
+  {
+    "from": "/nieuws/pluk-de-nacht-utrecht",
+    "to": "/"
+  },
+  {
+    "from": "/nieuws/landelijk-innovatie-congres",
+    "to": "/"
+  },
+  {
+    "from": "/nieuws/wedding-event-spektakel",
+    "to": "/"
+  },
+  {
+    "from": "/nieuws/full-hd-beamers",
+    "to": "/"
+  },
+  {
+    "from": "/beamer/verhuur-hilversum-amersfoort-en-amsterdam",
+    "to": "/verhuur/hilversum"
+  },
+  {
+    "from": "/beamer/beamer-verhuur-alphen-aan-den-rijn-nieuwegein",
+    "to": "/verhuur/alphen-aan-den-rijn"
+  },
+  {
+    "from": "/licht-en-geluid/verhuur-hilversum-amersfoort-amsterdam",
+    "to": "/verhuur/hilversum"
+  },
+  {
+    "from": "/licht-en-geluid/verhuur-alphen-aan-den-rijn-nieuwegein",
+    "to": "/verhuur/alphen-aan-den-rijn"
+  },
+  {
+    "from": "/beamer/verhuur-alphen-aan-den-rijn",
+    "to": "/verhuur/alphen-aan-den-rijn"
+  },
+  {
+    "from": "/beamer/beamer-verhuur-amersfoort",
+    "to": "/verhuur/amersfoort"
+  },
+  {
+    "from": "/beamer/verhuur-amsterdam",
+    "to": "/verhuur/amsterdam"
+  },
+  {
+    "from": "/beamer/verhuur-nieuwegein",
+    "to": "/verhuur/nieuwegein"
+  },
+  {
+    "from": "/geluidsinstallatie-huren/utrecht-2",
+    "to": "/verhuur/utrecht"
+  },
+  {
+    "from": "/licht-en-geluid/amersfoort",
+    "to": "/verhuur/amersfoort"
+  },
+  {
+    "from": "/licht-en-geluid/amsterdam",
+    "to": "/verhuur/amsterdam"
+  },
+  {
+    "from": "/licht-en-geluid/hilversum",
+    "to": "/verhuur/hilversum"
+  },
+  {
+    "from": "/licht-en-geluid/licht-en-geluid-verhuur-nieuwegein",
+    "to": "/verhuur/nieuwegein"
+  },
+  {
+    "from": "/licht-en-geluid/alphen-aan-den-rijn",
+    "to": "/verhuur/alphen-aan-den-rijn"
+  },
+  {
+    "from": "/podium-huren/podium-huren-amersfoort",
+    "to": "/verhuur/dienst/podium-huren"
+  },
+  {
+    "from": "/geluidsinstallatie-huren/utrecht",
+    "to": "/verhuur/utrecht"
+  },
+  {
+    "from": "/podium-huren/amsterdam",
+    "to": "/verhuur/dienst/podium-huren"
+  },
+  {
+    "from": "/podium-huren/nieuwegein",
+    "to": "/verhuur/dienst/podium-huren"
+  },
+  {
+    "from": "/podium-huren/hilversum",
+    "to": "/verhuur/dienst/podium-huren"
+  },
+  {
+    "from": "/licht-en-geluid",
+    "to": "/verhuur"
+  },
+  {
+    "from": "/podium-huren",
+    "to": "/verhuur/dienst/podium-huren"
+  },
+  {
+    "from": "/geluidsinstallatie-huren",
+    "to": "/verhuur/dienst/geluid-huren"
+  },
+  {
+    "from": "/licht-en-geluid/verhuur-dj-apparatuur-in-utrecht",
+    "to": "/verhuur/utrecht"
+  },
+  {
+    "from": "/contact-dank-u",
+    "to": "/contact"
+  },
+  {
+    "from": "/audiovisuele-verhuur-utrecht",
+    "to": "/verhuur/dienst/audiovisuele-verhuur"
+  },
+  {
+    "from": "/geluidsapparatuur-huren-utrecht",
+    "to": "/verhuur/utrecht"
+  },
+  {
+    "from": "/projectiescherm-huren-utrecht",
+    "to": "/verhuur/utrecht"
+  },
+  {
+    "from": "/speaker-verhuur-utrecht",
+    "to": "/verhuur/utrecht"
+  },
+  {
+    "from": "/zanginstallatie-huren-utrecht",
+    "to": "/verhuur/utrecht"
+  },
+  {
+    "from": "/beamer/beamer-verhuur-utrecht",
+    "to": "/verhuur/utrecht"
+  },
+  {
+    "from": "/geluidsinstallatie-huren/geluidsset-huren",
+    "to": "/verhuur/dienst/geluid-huren"
+  },
+  {
+    "from": "/verkoop/marktplaats",
+    "to": "/verhuur"
+  },
+  {
+    "from": "/verhuur/verhuur-prijslijst",
+    "to": "/verhuur/dienst/verhuur-prijslijst"
+  },
+  {
+    "from": "/verkoop",
+    "to": "/verhuur"
+  },
+  {
+    "from": "/verkoop/installatie",
+    "to": "/verhuur"
+  },
+  {
+    "from": "/evenementen/zakelijke-evenementen",
+    "to": "/evenementen/type/zakelijke-evenementen"
+  },
+  {
+    "from": "/evenementen/publieke-evenementen",
+    "to": "/evenementen/type/publieke-evenementen"
+  },
+  {
+    "from": "/evenementen/festival-podium-dance",
+    "to": "/evenementen/type/festival-podium-dance"
+  },
+  {
+    "from": "/evenementen/feesten-partijen",
+    "to": "/evenementen/type/feesten-partijen"
+  },
+  {
+    "from": "/over-ons/stage-mogelijkheid",
+    "to": "/contact"
+  },
+  {
+    "from": "/contact/route",
+    "to": "/contact"
+  },
+  {
+    "from": "/verhuur/geluid-huren",
+    "to": "/verhuur/dienst/geluid-huren"
+  },
+  {
+    "from": "/verhuur/licht-huren",
+    "to": "/verhuur/dienst/licht-huren"
+  },
+  {
+    "from": "/verhuur/beamer-huren",
+    "to": "/verhuur/dienst/beamer-huren"
+  },
+  {
+    "from": "/verhuur/podium-huren",
+    "to": "/verhuur/dienst/podium-huren"
+  },
+  {
+    "from": "/contact/openingstijden",
+    "to": "/contact"
+  },
+  {
+    "from": "/verhuur/audiovisuele-verhuur",
+    "to": "/verhuur/dienst/audiovisuele-verhuur"
+  },
+  {
+    "from": "/verhuur/transport",
+    "to": "/verhuur/dienst/transport"
+  },
+  {
+    "from": "/licht-en-geluid-in-utrecht",
+    "to": "/verhuur/utrecht"
+  },
+  {
+    "from": "/beamer",
+    "to": "/verhuur/dienst/beamer-huren"
+  },
+  {
+    "from": "/verkoop/onderhoud",
+    "to": "/verhuur"
+  },
+  {
+    "from": "/verkoop/reperatie",
+    "to": "/verhuur"
+  },
+  {
+    "from": "/verhuur/technici",
+    "to": "/verhuur/dienst/technici"
+  },
+  {
+    "from": "/verhuur/verhuur-prijslijst/attachment/verhuurprijslijst_januari_2014-2",
+    "to": "/"
+  },
+  {
+    "from": "/licht-en-geluid/attachment/vinkje",
+    "to": "/"
+  },
+  {
+    "from": "/geluidsinstallatie-huren/geluidsset-huren/attachment/microfoon",
+    "to": "/"
+  },
+  {
+    "from": "/geluidsinstallatie-huren/geluidsset-huren/attachment/een-link-array",
+    "to": "/"
+  },
+  {
+    "from": "/nieuws/full-hd-beamers/attachment/recordplanet-2014-11-220",
+    "to": "/"
+  },
+  {
+    "from": "/nieuws/full-hd-beamers/attachment/wk-veld",
+    "to": "/"
+  },
+  {
+    "from": "/nieuws/full-hd-beamers/attachment/foto-header03",
+    "to": "/"
+  },
+  {
+    "from": "/nieuws/full-hd-beamers/attachment/foto-header07",
+    "to": "/"
+  },
+  {
+    "from": "/category/nieuws",
+    "to": "/"
+  },
+  {
+    "from": "/author/admin",
+    "to": "/"
+  }
+]

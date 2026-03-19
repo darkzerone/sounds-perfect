@@ -77,6 +77,9 @@
   .verhuur-grid {
     grid-template-columns: 1fr;
   }
+  .hero-small {
+    padding-top: 100px; /* Reduced offset for 80px mobile navbar with spacing */
+  }
 }
 
 /* Feature Cards (Used in Location.jsx) */

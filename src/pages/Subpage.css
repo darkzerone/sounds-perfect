@@ -8,13 +8,13 @@
 
 .subpage-hero {
   position: relative;
-  height: 45vh;
-  min-height: 400px;
+  min-height: 450px; /* Increased min-height to prevent crowding */
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px; /* Offset for navbar */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center horizontally */
+  padding-top: 160px; /* Hard push content DOWN to clear navbar space completely */
+  padding-bottom: 60px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -198,4 +198,11 @@
   color: var(--text-secondary);
   margin-bottom: 2rem;
   font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .subpage-hero {
+    padding-top: 80px;
+    margin-top: 0;
+  }
 }

@@ -31,10 +31,10 @@
 }
 
 .logo-image {
-  height: 70px;
-  width: auto;
+  height: 54px;
+  width: 175px;
   object-fit: contain;
-  padding: 0.5rem 0rem;
+  padding: 0.2rem 0rem;
 }
 
 .navbar-links {
@@ -64,7 +64,7 @@
 }
 
 .nav-link.active {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #005c9c;
   font-weight: 600;
 }
 
@@ -146,6 +146,10 @@
   }
 
   .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 0 1rem;
     height: 80px; /* Reduce navbar height on mobile to save space */
     background: var(--brand-blue); /* Solid blue on mobile so white logo is visible */

@@ -1,9 +1,29 @@
 User-agent: *
 Allow: /
-
-# Exclude private admin and dynamic stream routes
 Disallow: /admin
 Disallow: /admin/
 Disallow: /stream/
+
+# AI Search and Retrieval Crawlers explicit Allow
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
 
 Sitemap: https://sounds-perfect.nl/sitemap.xml

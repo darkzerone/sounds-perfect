@@ -1,9 +1,9 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { useParams, Navigate, Link, useSearchParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import SEOHelmet from '../components/SEOHelmet';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
-import { getEventById, eventsData } from '../data/events';
+import { getEventById } from '../data/events';
 import { getRegionById } from '../data/regions';
 import './Subpage.css';
 
@@ -41,9 +41,11 @@ export default function EventPage() {
 
   return (
     <div className="subpage-container">
-      <Helmet>
-        <title>{`${event.title} ${locationKeyword} | Technische Productie | Sounds Perfect`}</title>
-        <meta name="description" content={`${event.description} in ${locationKeyword} en omstreken.`} />
+      <SEOHelmet 
+        title={`${event.title} ${locationKeyword} | Technische Productie | Sounds Perfect`}
+        description={`${event.description} in ${locationKeyword} en omstreken.`}
+        image={event.image}
+      >
         <link rel="canonical" href={`https://sounds-perfect.nl/evenementen/type/${eventId}${regioParam ? `?regio=${regioParam}` : ''}`} />
         <meta property="og:title" content={`${event.title} | Sounds Perfect`} />
         <meta property="og:description" content={event.description} />
@@ -69,16 +71,18 @@ export default function EventPage() {
             }
           })}
         </script>
-      </Helmet>
+      </SEOHelmet>
 
       {/* Hero Header */}
       <div className="subpage-hero">
         <div className="subpage-hero-bg">
           <img 
-            src={event.image} 
+            src={event.image.startsWith('http') ? `${event.image}&w=1200` : event.image} 
+            srcSet={event.image.startsWith('http') ? `${event.image}&w=640 640w, ${event.image}&w=1024 1024w, ${event.image}&w=1600 1600w` : undefined}
+            sizes="100vw"
             alt={event.title} 
             className="subpage-hero-img"
-            fetchpriority="high"
+            fetchPriority="high" 
           />
           <div className="subpage-hero-overlay" />
         </div>
@@ -93,7 +97,7 @@ export default function EventPage() {
             <div className="subpage-icon-wrapper">
               <Icon size={48} />
             </div>
-            <h1 className="subpage-title">{event.title}</h1>
+            <h1 className="subpage-title">{event.title} in {locationKeyword}</h1>
             <p className="subpage-desc">
               {event.description}
             </p>

@@ -1,115 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import SEOHelmet from '../components/SEOHelmet';
 import { LogOut, Plus, Trash2, Video, ExternalLink } from 'lucide-react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import useStreams from '../hooks/useStreams';
 import './AdminDashboard.css';
 
 export default function AdminDashboard({ onLogout }) {
-  const [streams, setStreams] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate();
+  const { 
+    streams, loading, error, isModalOpen, setIsModalOpen, 
+    newStream, setNewStream, handleLogout, handleDelete, handleCreate 
+  } = useStreams(onLogout);
 
-  // Form State
-  const [newStream, setNewStream] = useState({
-    id: '', title: '', vimeoId: '', date: ''
-  });
-
-  const fetchStreams = async () => {
-    try {
-      const res = await fetch('/api/streams', {
-         credentials: 'include'
-      });
-    } catch(err) {
-      setError(err.message);
-    }
-  };
-
-  useEffect(() => {
-    // This will fetch streams when the component mounts
-    const loadStreams = async () => {
-      try {
-        const response = await fetch('/api/streams', {
-          credentials: 'include'
-        }); 
-        if (response.ok) {
-           const data = await response.json();
-           setStreams(data);
-        } else if (response.status === 401) {
-           handleLogout();
-        }
-      } catch (err) {
-        setError('Kon streams niet laden.');
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadStreams();
-  }, []);
-
-  const handleLogout = async () => {
-    try {
-      await fetch('/api/auth/logout', { 
-        method: 'POST',
-        credentials: 'include'
-      });
-    } catch (err) {
-      console.error(err);
-    }
-    onLogout();
-    navigate('/admin');
-  };
-
-  const handleDelete = async (id) => {
-    if (!window.confirm('Weet u zeker dat u deze stream wilt verwijderen?')) return;
-    
-    try {
-      const res = await fetch(`/api/streams/${id}`, { 
-        method: 'DELETE',
-        credentials: 'include'
-      });
-      if (res.ok) {
-        setStreams(streams.filter(s => s.id !== id));
-      } else {
-        alert('Er is een fout opgetreden bij het verwijderen.');
-      }
-    } catch(err) {
-      alert('Er is een netwerkfout opgetreden.');
-    }
-  };
-
-  const handleCreate = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await fetch('/api/streams', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify(newStream)
-      });
-      
-      const data = await res.json();
-      
-      if (res.ok) {
-        setStreams([data, ...streams]);
-        setIsModalOpen(false);
-        setNewStream({ id: '', title: '', vimeoId: '', date: '' });
-      } else {
-        alert(data.error || 'Er is een fout opgetreden.');
-      }
-    } catch (err) {
-      alert('Kan geen verbinding maken met de server.');
-    }
-  };
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
 
   return (
     <div className="admin-dashboard-page">
-      <Helmet>
+      <SEOHelmet>
         <title>Stream Beheer | Sounds Perfect</title>
         <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      </SEOHelmet>
       <div className="admin-container">
         <div className="admin-dashboard-header">
           <div className="admin-dashboard-title">
@@ -117,7 +29,7 @@ export default function AdminDashboard({ onLogout }) {
             <p>Beheer de besloten videostreams via de backdoor.</p>
           </div>
           <div className="admin-actions">
-            <button onClick={() => setIsModalOpen(true)} className="btn btn-primary" style={{ display: 'flex', alignItems: 'center' }}>
+            <button onClick={handleOpenModal} className="btn btn-primary" style={{ display: 'flex', alignItems: 'center' }}>
               <Plus size={18} style={{ marginRight: '8px' }} /> Nieuwe Stream
             </button>
             <button onClick={handleLogout} className="btn btn-outline" style={{ display: 'flex', alignItems: 'center' }}>
@@ -147,6 +59,7 @@ export default function AdminDashboard({ onLogout }) {
                   <tr>
                     <th>Stream ID / Link</th>
                     <th>Titel</th>
+                    <th>Type</th>
                     <th>Vimeo ID</th>
                     <th>Datum</th>
                     <th className="text-right">Acties</th>
@@ -168,6 +81,7 @@ export default function AdminDashboard({ onLogout }) {
                         </Link>
                       </td>
                       <td className="stream-title">{stream.title}</td>
+                      <td className="stream-meta" style={{ textTransform: 'capitalize' }}>{stream.type || 'uitvaart'}</td>
                       <td className="stream-meta">{stream.vimeoId}</td>
                       <td className="stream-meta">{stream.date}</td>
                       <td className="text-right">
@@ -192,7 +106,7 @@ export default function AdminDashboard({ onLogout }) {
       <AnimatePresence>
         {isModalOpen && (
           <div className="modal-overlay">
-            <div className="modal-backdrop" onClick={() => setIsModalOpen(false)}></div>
+            <div className="modal-backdrop" onClick={handleCloseModal}></div>
             <motion.div 
               className="glass-panel modal-content"
               initial={{ opacity: 0, scale: 0.95 }}
@@ -226,6 +140,18 @@ export default function AdminDashboard({ onLogout }) {
                   />
                 </div>
                 <div className="form-group">
+                  <label>Type Evenement</label>
+                  <select 
+                    value={newStream.type || 'uitvaart'} 
+                    onChange={e => setNewStream({...newStream, type: e.target.value})}
+                    className="admin-input"
+                  >
+                    <option value="uitvaart">Uitvaart</option>
+                    <option value="bruiloft">Bruiloft</option>
+                    <option value="evenement">Algemeen Evenement</option>
+                  </select>
+                </div>
+                <div className="form-group">
                   <label>Datum</label>
                   <input 
                     type="text" required value={newStream.date} 
@@ -246,3 +172,7 @@ export default function AdminDashboard({ onLogout }) {
     </div>
   );
 }
+
+AdminDashboard.propTypes = {
+  onLogout: PropTypes.func.isRequired
+};

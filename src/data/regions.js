@@ -13,7 +13,10 @@ export const regions = [
   { id: 'amersfoort', name: 'Amersfoort' },
   { id: 'bilthoven', name: 'Bilthoven' },
   { id: 'bunnik', name: 'Bunnik' },
-  { id: 'de-bilt', name: 'De Bilt' }
+  { id: 'de-bilt', name: 'De Bilt' },
+  { id: 'alphen-aan-den-rijn', name: 'Alphen aan den Rijn' },
+  { id: 'amsterdam', name: 'Amsterdam' },
+  { id: 'hilversum', name: 'Hilversum' }
 ];
 
 export const getRegionById = (id) => {

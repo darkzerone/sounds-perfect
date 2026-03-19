@@ -14,14 +14,14 @@ export const servicesData = [
     ],
     sections: [
       {
-        title: 'Sounds-Perfect biedt een breed pakket wanneer u geluid wilt huren',
+        title: 'Kraakhelder geluid dat perfect aansluit op jouw publiek.',
         paragraphs: [
-          'Organiseert u een dansfeest op een bekende of grote locatie? Dan horen liveoptredens, muziek en presentatie allemaal goed voor de dag te komen. Anticipeert uw bedrijf op de organisatie van een congres of beursevent? Dan wilt u uiteraard dat uw sprekers of expert panel perfect bij de bezoekers overkomen.',
-          'Bij het organiseren van een evenement is goed geluid van essentieel belang voor de algehele ervaring van uw gasten. Gelukkig biedt Sounds-Perfect een uitgebreid assortiment aan hoogwaardige geluidsapparatuur voor verhuur, zodat u verzekerd bent van een indrukwekkende audioweergave die uw evenement naar een hoger niveau tilt.'
+          'Of je nu een intieme bijeenkomst organiseert of een knallend feest, bij Sounds Perfect regelen we het geluid tot in de puntjes. We verhuren niet alleen de apparatuur, maar zorgen vooral dat deze perfect wordt afgesteld op de locatie en je publiek, zo heb je nergens omkijken naar.',
+          'Bij het organiseren van een evenement is goed geluid van essentieel belang voor de algehele sfeer. Gelukkig biedt Sounds-Perfect een uitgebreid assortiment aan hoogwaardige luidsprekers, zanginstallaties en mixers voor verhuur. Je bent verzekerd van een indrukwekkende audioweergave die jouw evenement naar een hoger niveau tilt.'
         ]
       },
       {
-        title: 'Optimaal afgestemd geluid',
+        title: 'Optimaal afgestemd op de akoestiek',
         paragraphs: [
           'Wanneer u geluid huurt bij Sounds-Perfect, krijgt u niet alleen de apparatuur, maar ook onze expertise erbij. Onze technici beschikken over uitgebreide ervaring en kennis om het geluid nauwkeurig af te stemmen op uw specifieke locatie en publiek. Dit garandeert een optimale luisterervaring voor al uw aanwezigen, zonder dat u zich zorgen hoeft te maken over technische aspecten.'
         ]
@@ -61,9 +61,9 @@ export const servicesData = [
     ],
     sections: [
       {
-        title: 'Verlicht uw evenement naar een hoger niveau',
+        title: 'Zet je evenement in de schijnwerpers met sfeervolle lichtontwerpen.',
         paragraphs: [
-          'Bij het organiseren van een evenement, of het nu gaat om een intiem feest of een grootschalige productie, is de visuele ervaring net zo belangrijk als de geluidservaring. Bij Sounds-Perfect begrijpen we dat tot in de kern. Daarom bieden we niet alleen topkwaliteit in geluidsapparatuur, maar ook in licht. Licht huren bij ons betekent dat uw evenement in het juiste licht wordt gezet, waarmee de juiste sfeer en ambiance gegarandeerd zijn.'
+          'Licht bepaalt voor een groot deel de sfeer van de avond. Van subtiele achtergrondverlichting in jouw merkkleuren tot een spectaculaire lichtshow met lichtgewicht movingheads, wij ontwerpen een visuele beleving die jouw gasten gegarandeerd zal bijblijven. Bij Sounds-Perfect geloven we dat een onvergetelijke avond hand in hand gaat met de juiste belichting.'
         ]
       },
       {
@@ -100,10 +100,9 @@ export const servicesData = [
     ],
     sections: [
       {
-        title: 'De voordelen van een beamer',
+        title: 'Haarscherpe projecties die jouw boodschap overbrengen.',
         paragraphs: [
-          'Een beamer biedt verschillende voordelen ten opzichte van andere presentatiemiddelen. Een van de grootste voordelen is het grote projectieformaat. Hierdoor kunt u afbeeldingen, video\'s en presentaties op een veel groter scherm weergeven dan bijvoorbeeld op een televisie. Dit zorgt voor een indrukwekkende visuele ervaring.',
-          'Beamers zijn draagbaar en gemakkelijk te verplaatsen, waardoor ze ideaal zijn voor verschillende soorten evenementen en presentaties. Of u nu een vergadering op kantoor heeft of een filmavond organiseert in de buitenlucht.'
+          'Zorg dat je presentatie, video of live-feed ook achterin de zaal perfect te volgen is. Sounds Perfect verhuurt krachtige Full-HD en 4K projectoren met hoge lichtopbrengst en de bijbehorende schermen. Geen gedoe met kabels, wij regelen vakkundige afstelling voor een vlekkeloos resultaat.'
         ]
       },
       {
@@ -135,9 +134,9 @@ export const servicesData = [
     ],
     sections: [
       {
-        title: 'Voordelen van podium huren',
+        title: 'Veilige en stabiele podia die de show stelen.',
         paragraphs: [
-          'Een podium huren biedt vele voordelen. Allereerst zorgt een podium voor een professionele uitstraling van uw evenement. Daarnaast biedt het een centrale plek waar alle aandacht naar uitgaat. Dit is ideaal voor sprekers, muzikanten of andere uitvoeringen. Onze podiums zijn van hoge kwaliteit en bieden veiligheid en stabiliteit.'
+          'Zet jouw sprekers, DJ of acts letterlijk op een voetstuk. Onze representatieve Prolyte podiumdelen zijn in elke gewenste afmeting en hoogte leverbaar. Altijd uitgerust met anti-slip toplagen en zwarte afrokbekleding voor een strakke en vooral veilige afwerking.'
         ]
       },
       {
@@ -170,9 +169,9 @@ export const servicesData = [
     ],
     sections: [
       {
-        title: 'Ons assortiment audiovisueel verhuur',
+        title: 'Volledige ontzorging met 360° AV-ondersteuning.',
         paragraphs: [
-          'Als gespecialiseerd audiovisueel bedrijf beschikken wij over een zeer breed verhuurpakket, waaronder geluidsinstallaties, lichtinstallaties, beamers en podia. Wij leveren audiovisueel materiaal voor zowel particuliere als zakelijke evenementen, en kunnen volledige technische ondersteuning bieden. U kunt er ook voor kiezen om losse apparatuur te huren.'
+          'Geef de techniek van je evenement met een gerust hart uit handen. Wij combineren feilloos geluid, scherpe LED-walls en camera-registraties tot één strakke totaalproductie, zodat jij je volledig kunt focussen op wat er op het podium gebeurt. Sounds-Perfect is jouw partner van A tot Z.'
         ]
       },
       {
@@ -195,6 +194,7 @@ export const servicesData = [
     title: 'Transportservice',
     description: 'Gemakkelijk en snel uw gehuurde materialen op locatie bezorgd. Onze chauffeurs leveren de apparatuur af en halen het desgewenst ook weer op, 7 dagen per week.',
     icon: Truck,
+    ctaTitle: 'Transportservice nodig?',
     features: [
       'Levering in heel Nederland',
       'Inclusief laden, lossen en transport naar de zaal',
@@ -229,14 +229,15 @@ export const servicesData = [
   {
     id: 'verhuur-prijslijst',
     title: 'Verhuur Prijslijst',
-    description: 'Bekijk ons actuele aanbod en de bijbehorende tarieven in onze overzichtelijke verhuur prijslijst. Wij hanteren eerlijke en transparante prijzen zonder verrassingen achteraf.',
+    description: 'Voor onze licht- en geluidsinstallaties maken we graag een voorstel op maat. Omdat elk evenement uniek is, bieden we transparante setprijzen die exact passen bij jouw wensen.',
     icon: FileText,
+    ctaTitle: 'Wil je onze prijslijst inzien?',
     features: [
-      'Direct inzicht in dagprijzen van losse apparatuur',
-      'Staffelkortingen voor meerdaagse huur',
-      'Compleet samengestelde sets voor een voordelige pakketprijs',
-      'Altijd de meest recente prijzen beschikbaar',
-      'Prijzen inclusief btw en bekabeling'
+      'Vrijblijvend voorstel op maat voor jouw event',
+      'Scherpe en overzichtelijke setprijzen',
+      'Geen verborgen kosten, helder en transparant',
+      'Hulp bij het samenstellen van de juiste set',
+      'Direct contact voor persoonlijk advies'
     ],
     sections: [
       {
@@ -258,8 +259,9 @@ export const servicesData = [
   {
     id: 'technici',
     title: 'Technici',
-    description: 'Zorgeloos uw evenement beleven? Boek onze ervaren geluidstechnici en lichtoperators. Zij bedienen de apparatuur vakkundig zodat u zich volledig op uw gasten kunt richten.',
+    description: 'Professionele ondersteuning door ervaren geluidstechnici en lichtoperators. Wij zorgen voor een vlekkeloze bediening van de apparatuur tijdens uw evenement.',
     icon: UserCog,
+    ctaTitle: 'Ervaren technicus nodig?',
     features: [
       'Ervaren Front of House (FOH) geluidsmannen',
       'Creatieve lichtoperators voor live bediening',
@@ -269,9 +271,9 @@ export const servicesData = [
     ],
     sections: [
       {
-        title: 'Technicus huren voor audio, licht en video op jouw event',
+        title: 'Zorgeloze executie met ervaren AV-technici op locatie.',
         paragraphs: [
-          'Een ervaren technicus geeft je event rust en zekerheid. Of je nu een bruiloft organiseert, een bedrijfsmeeting voorbereidt of een groter evenement produceert, je wilt dat alles werkt zoals het moet. Een technicus van Sounds Perfect richt de volledige AV techniek in en begeleidt je programma van begin tot eind. Je profiteert van meer dan twintig jaar ervaring, eigen apparatuur en ondersteuning op locatie in heel Nederland.'
+          'Een ervaren technicus geeft rust en zekerheid. Of je nu een bruiloft organiseert of een zakelijk congres produceert, je wilt dat de techniek simpelweg werkt. Onze technici regelen de volledige inregeling en begeleiden je programma vakkundig vanaf de achtergrond voor een vlekkeloze avond.'
         ]
       },
       {

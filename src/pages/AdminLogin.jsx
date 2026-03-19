@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEOHelmet from '../components/SEOHelmet';
 import { Lock, LogIn } from 'lucide-react';
 import './AdminLogin.css';
 
@@ -35,7 +36,7 @@ export default function AdminLogin({ onLogin }) {
       } else {
         setError(data.error || 'Ongeldig wachtwoord');
       }
-    } catch (err) {
+    } catch (err) { console.error(err);
       setError('Kan geen verbinding maken met de server.');
     } finally {
       setLoading(false);
@@ -44,10 +45,10 @@ export default function AdminLogin({ onLogin }) {
 
   return (
     <div className="admin-login-page">
-      <Helmet>
+      <SEOHelmet>
         <title>Beheer | Sounds Perfect</title>
         <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      </SEOHelmet>
       <div className="admin-background"></div>
       <div className="admin-sphere"></div>
       

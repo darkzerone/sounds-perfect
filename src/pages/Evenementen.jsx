@@ -1,8 +1,8 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
 import { ArrowRight, Music, Users, Briefcase, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEOHelmet from '../components/SEOHelmet';
 import './Verhuur.css';
 
 export default function Evenementen() {
@@ -25,7 +25,7 @@ export default function Evenementen() {
 
   return (
     <div className="verhuur-page"> {/* Reusing base structural classes */}
-      <Helmet>
+      <SEOHelmet>
         <title>Evenementen Productie Utrecht | Sounds Perfect</title>
         <meta name="description" content="Complete technische ontzorging voor uw evenement in de regio Utrecht. Professionele licht, beeld en geluidsproductie voor bedrijfsfeesten en festivals." />
         <link rel="canonical" href="https://sounds-perfect.nl/evenementen" />
@@ -33,7 +33,7 @@ export default function Evenementen() {
         <meta property="og:description" content="Complete technische ontzorging voor uw evenement in de regio Utrecht. Professionele licht, beeld en geluidsproductie voor bedrijfsfeesten en festivals." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+      </SEOHelmet>
 
       <div className="hero-section hero-small">
         <div className="hero-background">
@@ -70,7 +70,7 @@ export default function Evenementen() {
           >
             <motion.div variants={itemVariants} className="content-block glass-panel mb-4">
               <div className="content-image overflow-hidden rounded-t-lg">
-                 <img src="/event.png" alt="Event Lighting Stage" className="w-full h-auto object-cover max-h-[400px]" fetchpriority="high" />
+                 <img src="/event.webp" alt="Event Lighting Stage" className="w-full h-auto object-cover max-h-[400px]" fetchPriority="high" />
               </div>
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-4" style={{ color: 'var(--text-primary)'}}>Licht & Beeld Productie</h2>

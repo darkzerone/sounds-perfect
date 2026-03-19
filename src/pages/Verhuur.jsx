@@ -1,8 +1,8 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
 import { Speaker, Settings, Video, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEOHelmet from '../components/SEOHelmet';
 import './Verhuur.css';
 
 export default function Verhuur() {
@@ -25,7 +25,7 @@ export default function Verhuur() {
 
   return (
     <div className="verhuur-page">
-      <Helmet>
+      <SEOHelmet>
         <title>Audio &amp; Licht Verhuur Utrecht | Sounds Perfect</title>
         <meta name="description" content="Bekijk ons uitgebreide assortiment aan professionele audio, licht en podium verhuur in Midden-Nederland en de hele regio Utrecht." />
         <link rel="canonical" href="https://sounds-perfect.nl/verhuur" />
@@ -33,7 +33,7 @@ export default function Verhuur() {
         <meta property="og:description" content="Bekijk ons uitgebreide assortiment aan professionele audio, licht en podium verhuur in Midden-Nederland en de hele regio Utrecht." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+      </SEOHelmet>
 
       <div className="hero-section hero-small">
         <div className="hero-background">
@@ -70,7 +70,7 @@ export default function Verhuur() {
           >
             <motion.div variants={itemVariants} className="content-block glass-panel mb-4">
               <div className="content-image overflow-hidden rounded-t-lg">
-               <img src="/rental.png" alt="Audio Equipment Rental" className="w-full h-auto object-cover max-h-[400px]" fetchpriority="high" />
+               <img src="/rental.webp" alt="Audio Equipment Rental" className="w-full h-auto object-cover max-h-[400px]" fetchPriority="high" />
               </div>
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-4" style={{ color: 'var(--text-primary)'}}>Licht en Geluid Verhuur</h2>

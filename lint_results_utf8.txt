@@ -1,0 +1,32 @@
+﻿
+> app@0.0.0 lint
+> eslint .
+
+
+C:\SL Tech\sounds-perfect\app\server.js
+   21:14  error  'process' is not defined           no-undef
+   22:20  error  'process' is not defined           no-undef
+   23:24  error  'process' is not defined           no-undef
+   48:16  error  'process' is not defined           no-undef
+   52:5   error  'process' is not defined           no-undef
+   53:28  error  'process' is not defined           no-undef
+  140:19  error  'process' is not defined           no-undef
+  148:14  error  'error' is defined but never used  no-unused-vars
+
+C:\SL Tech\sounds-perfect\app\src\components\Navbar.jsx
+  1:27  error  'useEffect' is defined but never used. Allowed unused vars must match /^[A-Z_]|motion/u  no-unused-vars
+
+C:\SL Tech\sounds-perfect\app\src\hooks\useStreams.js
+  33:6   warning  React Hook useEffect has a missing dependency: 'loadStreams'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  52:13  error    'err' is defined but never used                                                                                 no-unused-vars
+  72:14  error    'err' is defined but never used                                                                                 no-unused-vars
+
+C:\SL Tech\sounds-perfect\app\src\pages\Home.jsx
+  3:17  error  'useState' is defined but never used. Allowed unused vars must match /^[A-Z_]|motion/u   no-unused-vars
+  3:27  error  'useEffect' is defined but never used. Allowed unused vars must match /^[A-Z_]|motion/u  no-unused-vars
+
+C:\SL Tech\sounds-perfect\app\test_express_route.js
+  23:1  error  'process' is not defined  no-undef
+
+Γ£û 15 problems (14 errors, 1 warning)
+

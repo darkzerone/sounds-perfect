@@ -1,9 +1,9 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { useParams, Navigate, Link, useSearchParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import SEOHelmet from '../components/SEOHelmet';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
-import { getServiceById, servicesData } from '../data/services';
+import { getServiceById } from '../data/services';
 import { getRegionById } from '../data/regions';
 import './Subpage.css';
 
@@ -41,9 +41,11 @@ export default function ServicePage() {
 
   return (
     <div className="subpage-container">
-      <Helmet>
-        <title>{`${service.title} ${locationKeyword} | Professionele Verhuur | Sounds Perfect`}</title>
-        <meta name="description" content={`${service.description} in ${locationKeyword} en omstreken.`} />
+      <SEOHelmet 
+        title={`${service.title} ${locationKeyword} | Professionele Verhuur | Sounds Perfect`}
+        description={`${service.description} in ${locationKeyword} en omstreken.`}
+        image={service.image}
+      >
         <link rel="canonical" href={`https://sounds-perfect.nl/verhuur/dienst/${serviceId}${regioParam ? `?regio=${regioParam}` : ''}`} />
         <meta property="og:title" content={`${service.title} | Sounds Perfect`} />
         <meta property="og:description" content={service.description} />
@@ -59,9 +61,8 @@ export default function ServicePage() {
             "name": service.title,
             "description": service.description,
             "provider": {
-              "@type": "LocalBusiness",
-              "name": "Sounds Perfect",
-              "image": "https://sounds-perfect.nl/logo.png"
+              "@type": "ProfessionalService",
+              "@id": "https://sounds-perfect.nl/#localbusiness"
             },
             "areaServed": {
               "@type": "City",
@@ -69,16 +70,18 @@ export default function ServicePage() {
             }
           })}
         </script>
-      </Helmet>
+      </SEOHelmet>
 
       {/* Hero Header */}
       <div className="subpage-hero">
         <div className="subpage-hero-bg">
           <img 
-            src={service.image} 
+            src={service.image.startsWith('http') ? `${service.image}&w=1200` : service.image} 
+            srcSet={service.image.startsWith('http') ? `${service.image}&w=640 640w, ${service.image}&w=1024 1024w, ${service.image}&w=1600 1600w` : undefined}
+            sizes="100vw"
             alt={service.title} 
             className="subpage-hero-img"
-            fetchpriority="high"
+            fetchPriority="high" 
           />
           <div className="subpage-hero-overlay" />
         </div>
@@ -93,7 +96,7 @@ export default function ServicePage() {
             <div className="subpage-icon-wrapper">
               <Icon size={48} />
             </div>
-            <h1 className="subpage-title">{service.title}</h1>
+            <h1 className="subpage-title">{service.title} in {locationKeyword}</h1>
             <p className="subpage-desc">
               {service.description}
             </p>
@@ -142,7 +145,7 @@ export default function ServicePage() {
 
           {/* Call to Action */}
           <motion.div variants={itemVariants} className="subpage-cta">
-            <h2>Interesse in {service.title.toLowerCase()}?</h2>
+            <h2>{service.ctaTitle || `Interesse in ${service.title.toLowerCase()}?`}</h2>
             <p>Neem vrijblijvend contact met ons op voor een offerte op maat of meer informatie.</p>
             <Link 
               to={`/contact?subject=Offerteaanvraag%20${encodeURIComponent(service.title)}%20in%20${encodeURIComponent(locationKeyword)}`} 

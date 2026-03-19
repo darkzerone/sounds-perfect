@@ -1,11 +1,16 @@
+import { motion } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import SEOHelmet from '../components/SEOHelmet';
 import { Video } from 'lucide-react';
 import './Stream.css';
 
 export default function Stream() {
+  const getTypeSubtitle = (type) => {
+      if (type === 'bruiloft') return 'Een liefdevolle en feestelijke dag';
+      if (type === 'evenement') return 'Welkom bij ons live evenement!';
+      return 'Een liefdevolle en respectvolle herinnering';
+    };
   const { id } = useParams();
   const [stream, setStream] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -41,10 +46,10 @@ export default function Stream() {
 
   return (
     <div className="stream-page">
-      <Helmet>
+      <SEOHelmet>
         <title>{stream ? `${stream.title} | Livestream | Sounds Perfect` : 'Livestream | Sounds Perfect'}</title>
         <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      </SEOHelmet>
       <div className="stream-background">
         <div className="hero-pattern"></div>
       </div>
@@ -57,7 +62,7 @@ export default function Stream() {
       >
         <div className="stream-header glass-panel">
           <h1>{stream.title}</h1>
-          <p>{stream.date} • Een liefdevolle en respectvolle herinnering</p>
+          <p>{stream.date} • {getTypeSubtitle(stream.type)}</p>
         </div>
 
         <div className="video-wrapper glass-panel">

@@ -60,11 +60,9 @@ export const eventsData = [
     ],
     sections: [
       {
-        title: 'Bij festivals, podium- en dance events staat de muziek centraal',
+        title: 'Zware jongens voor de ultieme festival & dance beleving.',
         paragraphs: [
-          'Om die reden wordt deze ondersteund door een spetterende licht-, video- en/of lasershow. Op die manier wordt het publiek een onvergetelijke tijd bezorgd.',
-          'Sounds-Perfect helpt u graag hiermee. Wij werken alleen met de beste audiomerken zoals Electro-Voice, Acoustic line, Shure, Sennheiser, Crown, Crest en Bss. Op het gebied van licht-, video- en laser apparatuur hebben wij te veel om op te noemen. Neem bijvoorbeeld ons LED pixel screen, te gebruiken als een groot scherm van 3,60m x 2,40m of in delen op te hangen voor een spectaculaire show.',
-          'U bent van harte welkom bij ons op de zaak om de mogelijkheden te bekijken en te bespreken. Bel ons op <a href="tel:0302931212">030-2931212</a> of <a href="/contact">stuur een bericht</a>. Verse bonenkoffie staat voor u klaar! Een afspraak op locatie behoort ook tot de mogelijkheden.'
+          'Bij festivals en concerten staat de muziek centraal, gedreven door een spectaculaire licht- en videoshow. Wij werken uitsluitend met toonaangevende audiomerken (EV, Acoustic Line) die kicken waar het moet, zodat artiesten comfortabel performen en je bezoekers een topnacht beleven. Kom gerust even langs op de zaak voor een brainstorm, de bonenkoffie staat al klaar!',
         ]
       }
     ],
@@ -83,11 +81,9 @@ export const eventsData = [
     ],
     sections: [
       {
-        title: 'Licht en geluid voor feestelijkheden',
+        title: 'Sfeervolle omlijsting voor een feest om nooit te vergeten.',
         paragraphs: [
-          'Bruiloften, examens en verjaardagen zijn een paar voorbeelden van feestelijkheden waar licht en geluid onontbeerlijk zijn. De ene klant wil dit uitbundig vieren met een spectaculair feest waar een ander met minder genoegen neemt.',
-          'Bij Sounds-Perfect bent u aan het juiste adres om uw feest ook met een gepast budget een succes te laten worden. Geheel in eigen beheer of geheel door ons verzorgd. Van het huren van een enkel lichteffect tot een gehele licht- en geluidshow. Alles is mogelijk bij ons.',
-          'Kom bij ons bekijken en vervolgens bespreken wat er allemaal mogelijk is. Bel ons op <a href="tel:0302931212">030-2931212</a> of stuur een bericht via het <a href="/contact">contactformulier</a>.'
+          'Bruiloft, verjaardag of jubileum? Wij leggen de perfecte technische basis voor jouw dansvloer. Onze plug-and-play party-sets combineren goed geluid met sfeereffecten die intuïtief werken, zodat jij ontspannen kunt feesten met je gasten. Van een los lichteffect tot compleet verzorgde DJ-shows, alles is mogelijk bij ons.',
         ]
       }
     ],

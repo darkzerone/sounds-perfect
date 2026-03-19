@@ -1,3 +1,4 @@
+/* eslint-env node */
 import express from 'express';
 import sqlite3 from 'sqlite3';
 import cors from 'cors';
@@ -67,6 +68,11 @@ const db = new sqlite3.Database(dbPath, (err) => {
       date TEXT NOT NULL,
       createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
     )`);
+
+    // Safe Alter Column append trigger
+    db.run(`ALTER TABLE streams ADD COLUMN type TEXT DEFAULT 'uitvaart'`, (err) => {
+      if (err) { /* column exists */ }
+    });
 
     db.run(`CREATE TABLE IF NOT EXISTS users (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -178,15 +184,15 @@ app.get('/api/streams/:id', (req, res) => {
 
 // Create new stream (Admin only)
 app.post('/api/streams', authenticateToken, (req, res) => {
-  const { id, title, vimeoId, date } = req.body;
+  const { id, title, vimeoId, date, type = 'uitvaart' } = req.body;
 
   if (!id || !title || !vimeoId || !date) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
   db.run(
-    'INSERT INTO streams (id, title, vimeoId, date) VALUES (?, ?, ?, ?)',
-    [id, title, vimeoId, date],
+    'INSERT INTO streams (id, title, vimeoId, date, type) VALUES (?, ?, ?, ?, ?)',
+    [id, title, vimeoId, date, type],
     function (err) {
       if (err) {
         if (err.message.includes('UNIQUE constraint failed')) {
@@ -194,7 +200,7 @@ app.post('/api/streams', authenticateToken, (req, res) => {
         }
         return res.status(500).json({ error: err.message });
       }
-      res.json({ id, title, vimeoId, date });
+      res.json({ id, title, vimeoId, date, type });
     }
   );
 });
@@ -208,6 +214,29 @@ app.delete('/api/streams/:id', authenticateToken, (req, res) => {
     res.json({ success: true, deleted: id });
   });
 });
+
+// --- SEO Redirects ---
+const redirectsPath = path.join(__dirname, 'redirects.json');
+if (fs.existsSync(redirectsPath)) {
+  const redirectsList = JSON.parse(fs.readFileSync(redirectsPath, 'utf-8'));
+  const redirectMap = {};
+  redirectsList.forEach(r => {
+     redirectMap[r.from] = r.to;
+     if (!r.from.endsWith('/')) redirectMap[r.from + '/'] = r.to;
+  });
+
+  app.use((req, res, next) => {
+    let pathName = req.path;
+    if (pathName.endsWith('/') && pathName.length > 1) {
+       pathName = pathName.substring(0, pathName.length - 1);
+    }
+    const target = redirectMap[pathName] || redirectMap[req.path];
+    if (target) {
+       return res.redirect(301, target);
+    }
+    next();
+  });
+}
 
 // Serve static files from the Vite build directory
 app.use(express.static(path.join(__dirname, 'dist')));

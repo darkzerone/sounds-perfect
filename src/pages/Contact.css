@@ -242,8 +242,8 @@
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--text-secondary);
-  opacity: 0.6;
+  color: #64748b;
+  opacity: 1;
 }
 
 .submit-btn {
