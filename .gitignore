@@ -25,3 +25,9 @@ streams.db
 *.njsproj
 *.sln
 *.sw?
+
+# Evaluation and Diagnostics
+lighthouse_results*.json
+lint_results*.txt
+read_lh*.js
+test_express_route.js
