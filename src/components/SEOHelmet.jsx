@@ -15,13 +15,15 @@ export default function SEOHelmet({ title, description, image, type = 'website',
 
   const metaTitle = title || defaultMeta.title;
   const metaDesc = description || defaultMeta.description;
-  const canonicalUrl = `https://sounds-perfect.nl${path}`;
+  const canonicalUrl = `https://www.sounds-perfect.nl${path}`;
 
   return (
     <Helmet>
       <title>{metaTitle}</title>
       <meta name="description" content={metaDesc} />
       <link rel="canonical" href={canonicalUrl} />
+      <link rel="alternate" hreflang="nl" href={canonicalUrl} />
+      <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />

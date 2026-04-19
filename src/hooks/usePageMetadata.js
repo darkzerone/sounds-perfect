@@ -13,7 +13,7 @@ export default function usePageMetadata(fallbackData = {}) {
   return {
     title: defaultMeta.title,
     description: defaultMeta.description,
-    canonicalUrl: `https://sounds-perfect.nl${path}`,
+    canonicalUrl: `https://www.sounds-perfect.nl${path}`,
     path
   };
 }

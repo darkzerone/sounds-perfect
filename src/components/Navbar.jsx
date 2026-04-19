@@ -18,7 +18,7 @@ export default function Navbar() {
       <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
         <div className="navbar-container">
           <NavLink to="/" className="navbar-logo">
-            <img src="/logo.webp" alt="Sounds Perfect Logo" className="logo-image" width="175" height="54" loading="lazy" />
+            <img src="/logo.webp" alt="Sounds Perfect Logo" className="logo-image" width="175" height="54" />
           </NavLink>
           
           <div className="navbar-links desktop-only">

@@ -6,27 +6,75 @@ export const seoMetadata = {
   },
   "/verhuur/hilversum": {
     "title": "Licht en geluid verhuur Hilversum - Sounds Perfect",
-    "description": ""
+    "description": "Professionele licht en geluid verhuur in Hilversum en omstreken. Sounds Perfect levert topkwaliteit apparatuur voor feesten, bruiloften en bedrijfsevenementen."
   },
   "/verhuur/alphen-aan-den-rijn": {
     "title": "Licht en geluid verhuur Alphen aan den Rijn - Sounds Perfect",
-    "description": ""
+    "description": "Licht en geluid huren in Alphen aan den Rijn? Sounds Perfect biedt professionele verhuur van audio, licht en podiumtechniek voor elk evenement."
   },
   "/verhuur/amersfoort": {
-    "title": "Licht en geluid Amersfoort - Sounds Perfect",
-    "description": ""
+    "title": "Licht en geluid verhuur Amersfoort - Sounds Perfect",
+    "description": "Op zoek naar licht en geluid verhuur in Amersfoort? Sounds Perfect levert professionele apparatuur met persoonlijk advies voor uw evenement."
   },
   "/verhuur/amsterdam": {
     "title": "Licht en geluid verhuur Amsterdam - Sounds Perfect",
-    "description": ""
+    "description": "Licht en geluid huren in Amsterdam? Sounds Perfect verzorgt professionele audio- en lichtverhuur voor feesten, festivals en zakelijke evenementen."
   },
   "/verhuur/nieuwegein": {
     "title": "Licht en geluid verhuur Nieuwegein - Sounds Perfect",
-    "description": ""
+    "description": "Professionele licht en geluid verhuur in Nieuwegein. Van kleine feesten tot grote evenementen, Sounds Perfect staat voor u klaar met topapparatuur."
   },
   "/verhuur/utrecht": {
-    "title": "Zanginstallatie huren Utrecht - Sounds Perfecht | Zanginstallatie",
-    "description": "Zanginstallatie huren Utrecht? Uw zanginstallatie huren in Utrecht doet u bij Sounds-Perfect. Immers, bij uw optreden wilt u geen concessies doen ten"
+    "title": "Licht en geluid verhuur Utrecht - Sounds Perfect",
+    "description": "Licht en geluid huren in Utrecht? Sounds Perfect is uw lokale specialist voor professionele audio-, licht- en podiumverhuur. Vraag een offerte aan!"
+  },
+  "/verhuur/de-meern": {
+    "title": "Licht en geluid verhuur De Meern - Sounds Perfect",
+    "description": "Licht en geluid huren in De Meern? Sounds Perfect levert professionele audio- en lichtapparatuur voor elk evenement in De Meern en omstreken."
+  },
+  "/verhuur/houten": {
+    "title": "Licht en geluid verhuur Houten - Sounds Perfect",
+    "description": "Op zoek naar licht en geluid verhuur in Houten? Sounds Perfect biedt topkwaliteit apparatuur en persoonlijke service voor uw feest of evenement."
+  },
+  "/verhuur/zeist": {
+    "title": "Licht en geluid verhuur Zeist - Sounds Perfect",
+    "description": "Professionele licht en geluid verhuur in Zeist. Sounds Perfect verzorgt de techniek voor bruiloften, bedrijfsfeesten en festivals in de regio."
+  },
+  "/verhuur/vleuten": {
+    "title": "Licht en geluid verhuur Vleuten - Sounds Perfect",
+    "description": "Licht en geluid huren in Vleuten? Sounds Perfect levert professionele verhuur van audio, licht en podiumtechniek met persoonlijk advies."
+  },
+  "/verhuur/maarssen": {
+    "title": "Licht en geluid verhuur Maarssen - Sounds Perfect",
+    "description": "Op zoek naar licht en geluid verhuur in Maarssen? Sounds Perfect staat klaar met professionele apparatuur voor elk type evenement."
+  },
+  "/verhuur/ijsselstein": {
+    "title": "Licht en geluid verhuur IJsselstein - Sounds Perfect",
+    "description": "Professionele licht en geluid verhuur in IJsselstein. Van geluidsinstallaties tot sfeerverlichting, Sounds Perfect regelt het voor uw evenement."
+  },
+  "/verhuur/breukelen": {
+    "title": "Licht en geluid verhuur Breukelen - Sounds Perfect",
+    "description": "Licht en geluid huren in Breukelen? Sounds Perfect biedt professionele audio- en lichtverhuur voor feesten, bruiloften en zakelijke bijeenkomsten."
+  },
+  "/verhuur/vianen": {
+    "title": "Licht en geluid verhuur Vianen - Sounds Perfect",
+    "description": "Op zoek naar licht en geluid verhuur in Vianen? Sounds Perfect levert topkwaliteit apparatuur met bezorging en technische ondersteuning."
+  },
+  "/verhuur/woerden": {
+    "title": "Licht en geluid verhuur Woerden - Sounds Perfect",
+    "description": "Professionele licht en geluid verhuur in Woerden en omstreken. Sounds Perfect verzorgt de complete techniek voor uw evenement. Neem contact op!"
+  },
+  "/verhuur/bilthoven": {
+    "title": "Licht en geluid verhuur Bilthoven - Sounds Perfect",
+    "description": "Licht en geluid huren in Bilthoven? Sounds Perfect levert professionele audio- en lichtapparatuur voor feesten en evenementen in de regio."
+  },
+  "/verhuur/bunnik": {
+    "title": "Licht en geluid verhuur Bunnik - Sounds Perfect",
+    "description": "Op zoek naar licht en geluid verhuur in Bunnik? Sounds Perfect biedt professionele apparatuur en persoonlijke service voor elk evenement."
+  },
+  "/verhuur/de-bilt": {
+    "title": "Licht en geluid verhuur De Bilt - Sounds Perfect",
+    "description": "Professionele licht en geluid verhuur in De Bilt. Sounds Perfect levert topapparatuur voor bruiloften, feesten en bedrijfsevenementen in de regio."
   },
   "/verhuur/dienst/podium-huren": {
     "title": "Podium huren | Ruim assortiment & totaalpakket | Sounds Perfect",
@@ -54,15 +102,15 @@ export const seoMetadata = {
   },
   "/evenementen": {
     "title": "Apparatuur voor evenementen | Snel & makkelijk | Sounds Perfect",
-    "description": "Heeft u apparatuur nodig voor uw evenement? Van zakelijk, tot publiek en zelfs festivals! Sounds perfect zorgt voor de apparatuur én installatie!"
+    "description": "Heeft u apparatuur nodig voor uw evenement? Van zakelijk, tot publiek en zelfs festivals! Sounds Perfect zorgt voor de apparatuur én installatie!"
   },
   "/evenementen/type/zakelijke-evenementen": {
     "title": "Apparatuur voor zakelijke evenementen | Sounds Perfect",
-    "description": "Sound sperfect biedt de beste apparatuur voor uw zakelijke evenement. Een beurs, congres, of ander evenement kunnen we allemaal! Neem contact op!"
+    "description": "Sounds Perfect biedt de beste apparatuur voor uw zakelijke evenement. Een beurs, congres, of ander evenement kunnen we allemaal! Neem contact op!"
   },
   "/evenementen/type/publieke-evenementen": {
     "title": "Apparatuur voor publieke evenementen | Sounds Perfect",
-    "description": "Sounds perfect regelt het licht, geluid en audio voor uw evenement. Van sportevenementen of braderies tot carnaval en modeshows. Neem contact op!"
+    "description": "Sounds Perfect regelt het licht, geluid en audio voor uw evenement. Van sportevenementen of braderies tot carnaval en modeshows. Neem contact op!"
   },
   "/evenementen/type/festival-podium-dance": {
     "title": "Apparatuur voor festival, podium- en dance events | Sounds Perfect",
@@ -70,7 +118,7 @@ export const seoMetadata = {
   },
   "/evenementen/type/feesten-partijen": {
     "title": "Apparatuur voor al uw feesten en partijen | Sounds Perfect",
-    "description": "Sounds perfect regelt het licht, geluid en audio voor al uw feesten en partijen. Van bruiloften tot verjaardagen en examenfeesten. Neem contact op!"
+    "description": "Sounds Perfect regelt het licht, geluid en audio voor al uw feesten en partijen. Van bruiloften tot verjaardagen en examenfeesten. Neem contact op!"
   },
   "/over-ons": {
     "title": "Over ons | Leer het bedrijf kennen | Sounds Perfect",

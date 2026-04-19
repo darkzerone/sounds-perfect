@@ -39,7 +39,7 @@ export default function Location() {
         title={`Audio & Licht Verhuur in ${cityName} | Sounds Perfect`}
         description={`Dé specialist voor professionele audio, licht en podium verhuur in ${cityName}. Topkwaliteit apparatuur voor uw evenement, feest of bruiloft in de regio.`}
       >
-        <link rel="canonical" href={`https://sounds-perfect.nl/verhuur/${regio}`} />
+        <link rel="canonical" href={`https://www.sounds-perfect.nl/verhuur/${regio}`} />
       </SEOHelmet>
 
       <div className="hero-section hero-small">
