@@ -7,9 +7,9 @@ export default function LocalBusinessSchema() {
     "@type": "ProfessionalService",
     "name": "Sounds Perfect",
     "description": "Sounds Perfect: Professionele licht en geluid verhuur in de regio Utrecht. Topkwaliteit apparatuur voor feesten, festivals en bedrijfsevenementen.",
-    "image": "https://sounds-perfect.nl/logo.png",
-    "@id": "https://sounds-perfect.nl/#localbusiness",
-    "url": "https://sounds-perfect.nl",
+    "image": "https://www.sounds-perfect.nl/logo.png",
+    "@id": "https://www.sounds-perfect.nl/#localbusiness",
+    "url": "https://www.sounds-perfect.nl",
     "telephone": "+31 30 293 12 12",
     "priceRange": "$$",
     "address": {

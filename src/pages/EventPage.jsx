@@ -46,7 +46,7 @@ export default function EventPage() {
         description={`${event.description} in ${locationKeyword} en omstreken.`}
         image={event.image}
       >
-        <link rel="canonical" href={`https://sounds-perfect.nl/evenementen/type/${eventId}${regioParam ? `?regio=${regioParam}` : ''}`} />
+        <link rel="canonical" href={`https://www.sounds-perfect.nl/evenementen/type/${eventId}${regioParam ? `?regio=${regioParam}` : ''}`} />
         <meta property="og:title" content={`${event.title} | Sounds Perfect`} />
         <meta property="og:description" content={event.description} />
         <meta property="og:image" content={event.image} />
@@ -63,7 +63,7 @@ export default function EventPage() {
             "provider": {
               "@type": "LocalBusiness",
               "name": "Sounds Perfect",
-              "image": "https://sounds-perfect.nl/logo.png"
+              "image": "https://www.sounds-perfect.nl/logo.png"
             },
             "areaServed": {
               "@type": "City",

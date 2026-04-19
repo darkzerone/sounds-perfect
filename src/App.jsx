@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
 import ScrollToTop from './components/ScrollToTop';
+import BreadcrumbSchema from './components/BreadcrumbSchema';
 
 
 
@@ -30,12 +31,14 @@ const Location = lazy(() => import('./pages/Location'));
 const AdminLogin = lazy(() => import('./pages/AdminLogin'));
 const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
 const Privacy = lazy(() => import('./pages/Privacy'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function AppContent({ isAuthenticated, setIsAuthenticated }) {
   useAnalytics();
   return (
     <div className="app-container">
       <Navbar />
+      <BreadcrumbSchema />
       <main className="main-content">
         <Suspense fallback={<div style={{ padding: "4rem", textAlign: "center", color: "var(--brand-blue)", minHeight: "80vh" }}>Laden...</div>}>
         <Routes>
@@ -56,6 +59,7 @@ function AppContent({ isAuthenticated, setIsAuthenticated }) {
                 path="/admin/dashboard" 
                 element={isAuthenticated ? <AdminDashboard onLogout={() => setIsAuthenticated(false)} /> : <Navigate to="/admin" />} 
               />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>

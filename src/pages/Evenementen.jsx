@@ -28,7 +28,7 @@ export default function Evenementen() {
       <SEOHelmet>
         <title>Evenementen Productie Utrecht | Sounds Perfect</title>
         <meta name="description" content="Complete technische ontzorging voor uw evenement in de regio Utrecht. Professionele licht, beeld en geluidsproductie voor bedrijfsfeesten en festivals." />
-        <link rel="canonical" href="https://sounds-perfect.nl/evenementen" />
+        <link rel="canonical" href="https://www.sounds-perfect.nl/evenementen" />
         <meta property="og:title" content="Evenementen Productie Utrecht | Sounds Perfect" />
         <meta property="og:description" content="Complete technische ontzorging voor uw evenement in de regio Utrecht. Professionele licht, beeld en geluidsproductie voor bedrijfsfeesten en festivals." />
         <meta property="og:type" content="website" />

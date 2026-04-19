@@ -7,7 +7,7 @@ export default function Privacy() {
       <SEOHelmet>
         <title>Privacybeleid | Sounds Perfect</title>
         <meta name="description" content="Privacybeleid en cookieverklaring van Sounds Perfect." />
-        <link rel="canonical" href="https://sounds-perfect.nl/privacy" />
+        <link rel="canonical" href="https://www.sounds-perfect.nl/privacy" />
         <meta name="robots" content="noindex, follow" />
       </SEOHelmet>
 

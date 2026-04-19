@@ -46,7 +46,7 @@ export default function ServicePage() {
         description={`${service.description} in ${locationKeyword} en omstreken.`}
         image={service.image}
       >
-        <link rel="canonical" href={`https://sounds-perfect.nl/verhuur/dienst/${serviceId}${regioParam ? `?regio=${regioParam}` : ''}`} />
+        <link rel="canonical" href={`https://www.sounds-perfect.nl/verhuur/dienst/${serviceId}${regioParam ? `?regio=${regioParam}` : ''}`} />
         <meta property="og:title" content={`${service.title} | Sounds Perfect`} />
         <meta property="og:description" content={service.description} />
         <meta property="og:image" content={service.image} />
@@ -62,7 +62,7 @@ export default function ServicePage() {
             "description": service.description,
             "provider": {
               "@type": "ProfessionalService",
-              "@id": "https://sounds-perfect.nl/#localbusiness"
+              "@id": "https://www.sounds-perfect.nl/#localbusiness"
             },
             "areaServed": {
               "@type": "City",

@@ -28,7 +28,7 @@ export default function Verhuur() {
       <SEOHelmet>
         <title>Audio &amp; Licht Verhuur Utrecht | Sounds Perfect</title>
         <meta name="description" content="Bekijk ons uitgebreide assortiment aan professionele audio, licht en podium verhuur in Midden-Nederland en de hele regio Utrecht." />
-        <link rel="canonical" href="https://sounds-perfect.nl/verhuur" />
+        <link rel="canonical" href="https://www.sounds-perfect.nl/verhuur" />
         <meta property="og:title" content="Audio & Licht Verhuur Utrecht | Sounds Perfect" />
         <meta property="og:description" content="Bekijk ons uitgebreide assortiment aan professionele audio, licht en podium verhuur in Midden-Nederland en de hele regio Utrecht." />
         <meta property="og:type" content="website" />
